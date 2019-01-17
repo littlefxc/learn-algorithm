@@ -21,17 +21,6 @@ public class MergeSortTest {
         SortTestHelper.testSort("com.littlefxc.examples.algorithm.InsertionSort", "sort2", arr2);
         SortTestHelper.testSort("com.littlefxc.examples.algorithm.InsertionSort", "sort3", arr3);
         SortTestHelper.testSort("com.littlefxc.examples.algorithm.SelectionSort", "sort", arr4);
-
-        // 归并排序
-        long startTime = System.currentTimeMillis();
-        // 调用排序函数
-        MergeSort.sort(arr5, 0, arr5.length - 1);
-        long endTime = System.currentTimeMillis();
-        boolean sorted = SortTestHelper.isSorted(arr5);
-        if (!sorted) {
-            throw new IllegalStateException(MergeSort.class.getSimpleName() + ".sort" + " failed!");
-        }
-
-        System.out.println(MergeSort.class.getSimpleName() + ".sort : " + (endTime - startTime) + "ms");
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.MergeSort", "sort", arr5);
     }
 }
