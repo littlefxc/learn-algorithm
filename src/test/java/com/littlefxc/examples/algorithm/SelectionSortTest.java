@@ -14,6 +14,6 @@ public class SelectionSortTest {
     public void sort() {
         int N = 20000;
         Integer[] arr = SortTestHelper.generateRandomArray(N, 0, 100000);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.SelectionSort", arr);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.SelectionSort", "sort", arr);
     }
 }

@@ -11,6 +11,11 @@ public class InsertionSort {
     private InsertionSort() {
     }
 
+    /**
+     * 经过测试选择"插入排序写法 3"
+     *
+     * @param arr
+     */
     public static void sort(Comparable[] arr) {
         /* 写法 1 */
 //        sort1(arr);
@@ -23,7 +28,7 @@ public class InsertionSort {
      *
      * @param arr
      */
-    private static void sort3(Comparable[] arr) {
+    public static void sort3(Comparable[] arr) {
         for (int j = 1; j < arr.length; j++) {
             Comparable key = arr[j];
             int i = j - 1;
@@ -40,7 +45,7 @@ public class InsertionSort {
      *
      * @param arr
      */
-    private static void sort2(Comparable[] arr) {
+    public static void sort2(Comparable[] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = i; j > 0 && (arr[j].compareTo(arr[j - 1]) < 0); j--) {
                 swap(arr, j, j - 1);
@@ -53,7 +58,7 @@ public class InsertionSort {
      *
      * @param arr
      */
-    private static void sort1(Comparable[] arr) {
+    public static void sort1(Comparable[] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = i; j > 0; j--) {
                 if (arr[j].compareTo(arr[j - 1]) < 0) {

@@ -95,14 +95,14 @@ public class SortTestHelper {
      * @param sortClassName
      * @param arr
      */
-    public static void testSort(String sortClassName, Comparable[] arr) {
+    public static void testSort(String sortClassName, String sortMethodName, Comparable[] arr) {
 
         // 通过Java的反射机制，通过排序的类名，运行排序函数
         try {
             // 通过sortClassName获得排序函数的Class对象
             Class sortClass = Class.forName(sortClassName);
             // 通过排序函数的Class对象获得排序方法
-            Method sortMethod = sortClass.getMethod("sort", new Class[]{Comparable[].class});
+            Method sortMethod = sortClass.getMethod(sortMethodName, new Class[]{Comparable[].class});
             // 排序参数只有一个，是可比较数组arr
             Object[] params = new Object[]{arr};
 
@@ -112,10 +112,10 @@ public class SortTestHelper {
             long endTime = System.currentTimeMillis();
 
             if (!isSorted(arr)) {
-                throw new IllegalStateException(sortClassName + " failed!");
+                throw new IllegalStateException(sortClassName + "." + sortMethodName + " failed!");
             }
 
-            System.out.println(sortClass.getSimpleName() + " : " + (endTime - startTime) + "ms");
+            System.out.println(sortClass.getSimpleName() + "." + sortMethodName + " : " + (endTime - startTime) + "ms");
         } catch (Exception e) {
             e.printStackTrace();
         }
