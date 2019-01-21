@@ -17,10 +17,10 @@ public class MergeSortTest {
         Integer[] arr4 = Arrays.copyOf(arr1, arr1.length);
         Integer[] arr5 = Arrays.copyOf(arr1, arr1.length);
         System.out.println("完全无序的数组排序");
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.InsertionSort", "sort1", arr1);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.InsertionSort", "sort2", arr2);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.InsertionSort", "sort3", arr3);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.SelectionSort", "sort", arr4);
+//        SortTestHelper.testSort("com.littlefxc.examples.algorithm.InsertionSort", "sort1", arr1);
+//        SortTestHelper.testSort("com.littlefxc.examples.algorithm.InsertionSort", "sort2", arr2);
+//        SortTestHelper.testSort("com.littlefxc.examples.algorithm.InsertionSort", "sort3", arr3);
+//        SortTestHelper.testSort("com.littlefxc.examples.algorithm.SelectionSort", "sort", arr4);
         SortTestHelper.testSort("com.littlefxc.examples.algorithm.MergeSort", "sort", arr5);
     }
 }
