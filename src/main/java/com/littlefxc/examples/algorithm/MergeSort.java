@@ -17,6 +17,7 @@ public class MergeSort {
      * @param arr
      * @param left  被排序数组的第一个索引
      * @param right 被排序数组的最后一个索引
+     * @version 2
      */
     private static void sort(Comparable[] arr, int left, int right) {
         if (left >= right) {
@@ -26,11 +27,13 @@ public class MergeSort {
         int midIndex = (left + right) / 2;
         sort(arr, left, midIndex);
         sort(arr, midIndex + 1, right);
-        merge(arr, left, midIndex, right);
+        if (arr[midIndex].compareTo(arr[midIndex + 1]) > 0) {
+            // 当arr[midIndex].compareTo(arr[midIndex + 1]) > 0时，需要排序
+            merge(arr, left, midIndex, right);
+        }
     }
 
     /**
-     *
      * @param arr
      * @param left
      * @param midIndex
@@ -44,7 +47,7 @@ public class MergeSort {
         for (int k = left; k <= right; k++) {
             if (i > midIndex) {
                 // 左边数组已取完, j-left 表示减去偏移量
-                arr[k] = copy[j-left];
+                arr[k] = copy[j - left];
                 j++;
             } else if (j > right) {
                 // 右边数组已取完, i-left 表示减去偏移量
