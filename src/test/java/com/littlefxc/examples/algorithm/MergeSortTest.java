@@ -25,7 +25,7 @@ public class MergeSortTest {
     }
 
     @Test
-    public void sert2() {
+    public void sort2() {
         int N = 50000;
         Integer[] arr1 = SortTestHelper.generateNearlyOrderedArray(N, 5);
         Integer[] arr2 = Arrays.copyOf(arr1, arr1.length);

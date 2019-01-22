@@ -17,10 +17,26 @@ public class InsertionSort {
      * @param arr
      */
     public static void sort(Comparable[] arr) {
-        /* 写法 1 */
-//        sort1(arr);
-//        sort2(arr);
         sort3(arr);
+    }
+
+    /**
+     * 插入排序:对区间[left,right]进行排序
+     *
+     * @param arr
+     * @param left
+     * @param right
+     */
+    public static void insertionSort(Comparable[] arr, int left, int right) {
+        for (int i = left + 1; i <= right; i++) {
+            Comparable key = arr[i];
+            int j = i - 1;
+            while (j > left && arr[j].compareTo(key) > 0) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j] = key;
+        }
     }
 
     /**

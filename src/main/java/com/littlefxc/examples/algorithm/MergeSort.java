@@ -2,6 +2,9 @@ package com.littlefxc.examples.algorithm;
 
 import java.util.Arrays;
 
+/**
+ * 自动向下归并排序
+ */
 public class MergeSort {
 
     private MergeSort() {
@@ -27,7 +30,7 @@ public class MergeSort {
         // 当arr的容量小到一定程度的时候，使用插入排序会更好, todo n 取多少值时更合适？
         int n = 15;
         if (right - left <= n) {
-            insertionSort(arr, left, right);
+            InsertionSort.insertionSort(arr, left, right);
             return;
         }
 
@@ -41,24 +44,7 @@ public class MergeSort {
         }
     }
 
-    /**
-     * 插入排序
-     *
-     * @param arr
-     * @param left
-     * @param right
-     */
-    private static void insertionSort(Comparable[] arr, int left, int right) {
-        for( int i = left + 1 ; i <= right ; i ++ ){
-            Comparable key = arr[i];
-            int j = i - 1;
-            while (j > left && arr[j].compareTo(key) > 0) {
-                arr[j + 1] = arr[j];
-                j--;
-            }
-            arr[j] = key;
-        }
-    }
+
 
     /**
      * @param arr
@@ -66,7 +52,7 @@ public class MergeSort {
      * @param midIndex
      * @param right
      */
-    private static void merge(Comparable[] arr, int left, int midIndex, int right) {
+    protected static void merge(Comparable[] arr, int left, int midIndex, int right) {
         Comparable[] copy = Arrays.copyOfRange(arr, left, right + 1);
 
         int i = left;
