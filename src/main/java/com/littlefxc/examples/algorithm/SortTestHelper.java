@@ -2,6 +2,11 @@ package com.littlefxc.examples.algorithm;
 
 import java.lang.reflect.Method;
 
+/**
+ * 测试帮助类
+ *
+ * @author fengxuechao
+ */
 public class SortTestHelper {
 
     private SortTestHelper() {
