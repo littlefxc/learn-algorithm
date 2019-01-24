@@ -25,7 +25,7 @@ public class QuickSort {
             return;
         }
 
-        int q = partition2(arr, p, r);
+        int q = partition3(arr, p, r);
         sort(arr, p, q - 1);
         sort(arr, q + 1, r);
     }
@@ -76,6 +76,38 @@ public class QuickSort {
         }
         swap(arr, p, i);
         return i;
+    }
+
+    /**
+     * 一旦有大量重复的元素，版本2又有问题：被排序的数组的树极不平衡，时间复杂度退化为O(N^2)
+     * 解决办法：双路快速排序
+     *
+     * @param arr
+     * @param p
+     * @param r
+     * @return
+     */
+    private static int partition3(Comparable[] arr, int p, int r) {
+
+        // 随机在arr[l...r]的范围中, 选择一个数值作为标定点pivot
+        swap(arr, p, (int) (Math.random() * (r - p + 1)) + p);
+
+        Comparable key = arr[p];
+        int i = p + 1, j = r;
+        while (true) {
+            while (i <= r && arr[i].compareTo(key) < 0) {
+                i++;
+            }
+            while (j >= i + 1 && arr[j].compareTo(key) > 0) {
+                j--;
+            }
+            if (i > j) {
+                break;
+            }
+            swap(arr, i++, j--);
+        }
+        swap(arr, p, j);
+        return j;
     }
 
     private static void swap(Object[] arr, int i, int j) {
