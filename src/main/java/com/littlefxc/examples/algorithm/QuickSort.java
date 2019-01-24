@@ -10,8 +10,18 @@ public class QuickSort {
 
     }
 
+    /**
+     * 版本更新：对于对于小规模数组, 使用插入排序
+     *
+     * @param arr
+     * @param p
+     * @param r
+     * @version 2
+     */
     private static void sort(Comparable[] arr, int p, int r) {
-        if (p >= r) {
+        // 对于小规模数组, 使用插入排序
+        if (r - p <= 15) {
+            InsertionSort.insertionSort(arr, p, r);
             return;
         }
 
@@ -22,6 +32,7 @@ public class QuickSort {
 
     /**
      * 写法 1 - 出自《算法导论》
+     *
      * @param arr
      * @param p
      * @param r
@@ -42,20 +53,28 @@ public class QuickSort {
 
     /**
      * 写法 2
+     * 版本更新：为解决排序近乎有序的数组, 快速排序退化成O(N^2)级别， 同时1000000大小的数组派出异常 java.lang.StackOverflowError
+     * 解决办法：随机取分区点, 对于1000000大小的数组可以在1s内排序完成
+     *
      * @param arr
      * @param p
      * @param r
      * @return
+     * @version 2
      */
     private static int partition2(Comparable[] arr, int p, int r) {
+
+        // 随机在arr[l...r]的范围中, 选择一个数值作为标定点pivot
+        swap(arr, p, (int) (Math.random() * (r - p + 1)) + p);
+
         Comparable key = arr[p];
         int i = p;
         for (int j = p + 1; j <= r; j++) {
-            if(arr[j].compareTo(key) < 0) {
-                swap(arr, ++i, j);
+            if (arr[j].compareTo(key) < 0) {
+                swap(arr, j, ++i);
             }
         }
-        swap(arr, i, p);
+        swap(arr, p, i);
         return i;
     }
 
