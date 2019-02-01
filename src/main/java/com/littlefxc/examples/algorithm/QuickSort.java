@@ -1,5 +1,8 @@
 package com.littlefxc.examples.algorithm;
 
+/**
+ * 快速排序
+ */
 public class QuickSort {
     private QuickSort() {
     }
@@ -88,7 +91,6 @@ public class QuickSort {
      * @return
      */
     private static int partition3(Comparable[] arr, int p, int r) {
-
         // 随机在arr[l...r]的范围中, 选择一个数值作为标定点pivot
         swap(arr, p, (int) (Math.random() * (r - p + 1)) + p);
 
