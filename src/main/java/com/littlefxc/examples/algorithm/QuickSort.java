@@ -42,6 +42,9 @@ public class QuickSort {
      * @return
      */
     private static int partition1(Comparable[] arr, int p, int r) {
+        // 随机在arr[l...r]的范围中, 选择一个数值作为标定点pivot
+        swap(arr, p, (int) (Math.random() * (r - p + 1)) + p);
+
         // 写法 2
         Comparable key = arr[r];
         int i = p;
