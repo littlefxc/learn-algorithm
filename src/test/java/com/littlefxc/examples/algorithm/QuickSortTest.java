@@ -13,8 +13,10 @@ public class QuickSortTest {
         int N = 10000000;
         Integer[] arr1 = SortTestHelper.generateRandomArray(N, 0, N);
         Integer[] arr2 = Arrays.copyOf(arr1, arr1.length);
+        Integer[] arr3 = Arrays.copyOf(arr1, arr1.length);
         SortTestHelper.testSort("com.littlefxc.examples.algorithm.MergeSort", "sort", arr1);
         SortTestHelper.testSort("com.littlefxc.examples.algorithm.QuickSort", "sort", arr2);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.QuickSort", "sort2", arr3);
     }
 
     /**
@@ -25,8 +27,10 @@ public class QuickSortTest {
         int N = 10000000;
         Integer[] arr1 = SortTestHelper.generateNearlyOrderedArray(N, 1);
         Integer[] arr2 = Arrays.copyOf(arr1, arr1.length);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.QuickSort", "sort", arr1);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.MergeSort", "sort", arr2);
+        Integer[] arr3 = Arrays.copyOf(arr1, arr1.length);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.MergeSort", "sort", arr1);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.QuickSort", "sort", arr2);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.QuickSort", "sort2", arr3);
     }
 
     /**
@@ -38,7 +42,23 @@ public class QuickSortTest {
         int N = 1000000;
         Integer[] arr1 = SortTestHelper.generateRandomArray(N, 0, 10);
         Integer[] arr2 = Arrays.copyOf(arr1, arr1.length);
+        Integer[] arr3 = Arrays.copyOf(arr1, arr1.length);
         SortTestHelper.testSort("com.littlefxc.examples.algorithm.MergeSort", "sort", arr1);
         SortTestHelper.testSort("com.littlefxc.examples.algorithm.QuickSort", "sort", arr2);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.QuickSort", "sort2", arr3);
+    }
+
+    /**
+     * 使用三路快速排序
+     */
+    @Test
+    public void sort4() {
+        int N = 1000000;
+        Integer[] arr1 = SortTestHelper.generateRandomArray(N, 0, 10);
+        Integer[] arr2 = Arrays.copyOf(arr1, arr1.length);
+        Integer[] arr3 = Arrays.copyOf(arr1, arr1.length);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.MergeSort", "sort", arr1);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.QuickSort", "sort", arr2);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.QuickSort", "sort2", arr3);
     }
 }
