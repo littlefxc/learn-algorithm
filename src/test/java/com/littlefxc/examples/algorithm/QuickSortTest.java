@@ -1,10 +1,9 @@
 package com.littlefxc.examples.algorithm;
 
+import com.littlefxc.examples.algorithm.sort.SortTestHelper;
 import org.junit.Test;
 
 import java.util.Arrays;
-
-import static org.junit.Assert.*;
 
 public class QuickSortTest {
 
@@ -14,9 +13,9 @@ public class QuickSortTest {
         Integer[] arr1 = SortTestHelper.generateRandomArray(N, 0, N);
         Integer[] arr2 = Arrays.copyOf(arr1, arr1.length);
         Integer[] arr3 = Arrays.copyOf(arr1, arr1.length);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.MergeSort", "sort", arr1);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.QuickSort", "sort", arr2);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.QuickSort", "sort2", arr3);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.MergeSort", "sort", arr1);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.QuickSort", "sort", arr2);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.QuickSort", "sort2", arr3);
     }
 
     /**
@@ -28,9 +27,9 @@ public class QuickSortTest {
         Integer[] arr1 = SortTestHelper.generateNearlyOrderedArray(N, 1);
         Integer[] arr2 = Arrays.copyOf(arr1, arr1.length);
         Integer[] arr3 = Arrays.copyOf(arr1, arr1.length);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.MergeSort", "sort", arr1);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.QuickSort", "sort", arr2);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.QuickSort", "sort2", arr3);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.MergeSort", "sort", arr1);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.QuickSort", "sort", arr2);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.QuickSort", "sort2", arr3);
     }
 
     /**
@@ -43,9 +42,9 @@ public class QuickSortTest {
         Integer[] arr1 = SortTestHelper.generateRandomArray(N, 0, 10);
         Integer[] arr2 = Arrays.copyOf(arr1, arr1.length);
         Integer[] arr3 = Arrays.copyOf(arr1, arr1.length);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.MergeSort", "sort", arr1);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.QuickSort", "sort", arr2);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.QuickSort", "sort2", arr3);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.MergeSort", "sort", arr1);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.QuickSort", "sort", arr2);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.QuickSort", "sort2", arr3);
     }
 
     /**
@@ -57,8 +56,8 @@ public class QuickSortTest {
         Integer[] arr1 = SortTestHelper.generateRandomArray(N, 0, 10);
         Integer[] arr2 = Arrays.copyOf(arr1, arr1.length);
         Integer[] arr3 = Arrays.copyOf(arr1, arr1.length);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.MergeSort", "sort", arr1);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.QuickSort", "sort", arr2);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.QuickSort", "sort2", arr3);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.MergeSort", "sort", arr1);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.QuickSort", "sort", arr2);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.QuickSort", "sort2", arr3);
     }
 }

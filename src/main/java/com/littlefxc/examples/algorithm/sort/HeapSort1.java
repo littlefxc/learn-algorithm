@@ -1,4 +1,4 @@
-package com.littlefxc.examples.algorithm;
+package com.littlefxc.examples.algorithm.sort;
 
 import java.util.Arrays;
 
@@ -32,10 +32,10 @@ public class HeapSort1 {
         Integer[] arr2 = Arrays.copyOf(arr, N);
         Integer[] arr3 = Arrays.copyOf(arr, N);
         Integer[] arr4 = Arrays.copyOf(arr, N);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.HeapSort1", "sort", arr);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.HeapSort2", "sort", arr2);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.QuickSort", "sort", arr3);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.MergeSort", "sort", arr4);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.HeapSort1", "sort", arr);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.HeapSort2", "sort", arr2);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.QuickSort", "sort", arr3);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.MergeSort", "sort", arr4);
     }
     
     

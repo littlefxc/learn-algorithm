@@ -1,4 +1,4 @@
-package com.littlefxc.examples.algorithm;
+package com.littlefxc.examples.algorithm.sort;
 
 // 我们的PrintableMaxHeap只能处理整数信息，所以继承的是MaxHeap<Comparable<Integer>>
 public class PrintableMaxHeap extends MaxHeap<Comparable<Integer>> {

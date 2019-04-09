@@ -1,10 +1,9 @@
 package com.littlefxc.examples.algorithm;
 
+import com.littlefxc.examples.algorithm.sort.SortTestHelper;
 import org.junit.Test;
 
 import java.util.Arrays;
-
-import static org.junit.Assert.*;
 
 /**
  * @author fengxuechao
@@ -23,12 +22,12 @@ public class ShellSortTest {
         Integer[] arr3 = Arrays.copyOf(arr1, arr1.length);
         System.out.println("完全无序的数组排序");
         // 交换法
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.ShellSort", "sort1", arr1);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.ShellSort", "sort1", arr1);
         // 移动法
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.ShellSort", "sort2", arr2);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.ShellSort", "sort2", arr2);
 
         // 直接插入法
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.InsertionSort", "sort", arr3);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.InsertionSort", "sort", arr3);
     }
 
     /**
@@ -42,11 +41,11 @@ public class ShellSortTest {
         Integer[] arr3 = Arrays.copyOf(arr1, arr1.length);
         System.out.println("近乎有序的数组排序");
         // 交换法
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.ShellSort", "sort1", arr1);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.ShellSort", "sort1", arr1);
         // 移动法
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.ShellSort", "sort2", arr2);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.ShellSort", "sort2", arr2);
 
         // 直接插入法
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.InsertionSort", "sort", arr3);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.InsertionSort", "sort", arr3);
     }
 }

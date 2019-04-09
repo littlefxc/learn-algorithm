@@ -1,4 +1,4 @@
-package com.littlefxc.examples.algorithm;
+package com.littlefxc.examples.algorithm.sort;
 
 /**
  * 选择排序

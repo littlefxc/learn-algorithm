@@ -1,5 +1,6 @@
 package com.littlefxc.examples.algorithm;
 
+import com.littlefxc.examples.algorithm.sort.SortTestHelper;
 import org.junit.Test;
 
 /**
@@ -14,6 +15,6 @@ public class SelectionSortTest {
     public void sort() {
         int N = 20000;
         Integer[] arr = SortTestHelper.generateRandomArray(N, 0, 100000);
-        SortTestHelper.testSort("com.littlefxc.examples.algorithm.SelectionSort", "sort", arr);
+        SortTestHelper.testSort("com.littlefxc.examples.algorithm.sort.SelectionSort", "sort", arr);
     }
 }

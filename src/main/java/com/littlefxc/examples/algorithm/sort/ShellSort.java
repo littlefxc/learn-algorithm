@@ -1,4 +1,4 @@
-package com.littlefxc.examples.algorithm;
+package com.littlefxc.examples.algorithm.sort;
 
 /**
  * 希尔排序
